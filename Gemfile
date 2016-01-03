@@ -3,10 +3,17 @@ source 'https://rubygems.org'
 gem 'bundler'
 gem 'rake'
 
-gem 'lotusrb',     '0.5.0'
-gem 'lotus-model', '~> 0.5'
+gem 'lotusrb',           git: 'git://github.com/lotus/lotus.git'
+gem 'lotus-utils',       git: 'git://github.com/lotus/utils.git'
+gem 'lotus-assets',      git: 'git://github.com/lotus/assets.git'
+gem 'lotus-controller',  git: 'git://github.com/lotus/controller.git'
+gem 'lotus-model',       git: 'git://github.com/lotus/model.git'
+gem 'lotus-validations', git: 'git://github.com/lotus/validations.git'
+gem 'lotus-router',      git: 'git://github.com/lotus/router.git'
+gem 'lotus-helpers',     git: 'git://github.com/lotus/helpers.git'
+gem 'lotus-view',        path: '../view'
 
-
+gem 'puma'
 gem 'pg'
 
 group :test do
@@ -14,6 +21,6 @@ group :test do
   gem 'capybara'
 end
 
-group :production do
-  # gem 'puma'
+group :development do
+  gem 'pry'
 end

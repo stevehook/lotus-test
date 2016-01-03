@@ -1,3 +1,82 @@
+GIT
+  remote: git://github.com/lotus/assets.git
+  revision: 5455111c6a3f136f634bf39d972ccc6196c10d2a
+  specs:
+    lotus-assets (0.1.0)
+      lotus-helpers (~> 0.2, >= 0.2.5)
+      lotus-utils (~> 0.6)
+      tilt (~> 2.0, >= 2.0.1)
+      yui-compressor (~> 0.12)
+
+GIT
+  remote: git://github.com/lotus/controller.git
+  revision: 0e02d097ebe22f6843f04fe6f974546c85effcec
+  specs:
+    lotus-controller (0.5.0)
+      lotus-utils (~> 0.6)
+      lotus-validations (~> 0.4)
+      rack (~> 1.6, >= 1.6.2)
+
+GIT
+  remote: git://github.com/lotus/helpers.git
+  revision: 75f2a475a3ecc50da34843069298640da198d613
+  specs:
+    lotus-helpers (0.2.6)
+      lotus-utils (~> 0.6)
+
+GIT
+  remote: git://github.com/lotus/lotus.git
+  revision: 7a5cc4e9f5e9fc9b7a69b088b39ee8807a5b017d
+  specs:
+    lotusrb (0.5.0)
+      bundler (~> 1.6)
+      dotenv (~> 2.0)
+      lotus-assets (~> 0.1)
+      lotus-controller (~> 0.5)
+      lotus-helpers (~> 0.2, >= 0.2.6)
+      lotus-mailer (~> 0.1)
+      lotus-router (~> 0.5)
+      lotus-utils (~> 0.6)
+      lotus-view (~> 0.5)
+      shotgun (~> 0.9)
+      thor (~> 0.19)
+
+GIT
+  remote: git://github.com/lotus/model.git
+  revision: a44852b067078387e7ff3ade5f5aef7e4c8362a0
+  specs:
+    lotus-model (0.5.1)
+      lotus-utils (~> 0.6)
+      sequel (~> 4.9)
+
+GIT
+  remote: git://github.com/lotus/router.git
+  revision: 88bd2d5686987ce3fb291f982560f319916baa86
+  specs:
+    lotus-router (0.5.0)
+      http_router (~> 0.11)
+      lotus-utils (~> 0.6)
+
+GIT
+  remote: git://github.com/lotus/utils.git
+  revision: 8e1358348037c3c627524443db0c56ab2ce5dc8d
+  specs:
+    lotus-utils (0.6.0)
+
+GIT
+  remote: git://github.com/lotus/validations.git
+  revision: 3a4919ce090b6a9e45edbd3e872bdb0b35091d09
+  specs:
+    lotus-validations (0.4.0)
+      lotus-utils (~> 0.6)
+
+PATH
+  remote: ../view
+  specs:
+    lotus-view (0.5.0)
+      lotus-utils (~> 0.6)
+      tilt (~> 2.0, >= 2.0.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -7,50 +86,30 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
+    coderay (1.1.0)
     diff-lcs (1.2.5)
     dotenv (2.0.2)
     http_router (0.11.2)
       rack (>= 1.0.0)
       url_mount (~> 0.2.1)
-    lotus-controller (0.4.6)
-      lotus-utils (~> 0.5)
-      lotus-validations (~> 0.3, >= 0.3.3)
-      rack (~> 1.6, >= 1.6.2)
-    lotus-helpers (0.2.5)
-      lotus-utils (~> 0.5, >= 0.5.2)
     lotus-mailer (0.1.0)
       lotus-utils (~> 0.5)
       mail (~> 2.5)
       tilt (~> 2.0, >= 2.0.1)
-    lotus-model (0.5.0)
-      lotus-utils (~> 0.5)
-      sequel (~> 4.9)
-    lotus-router (0.4.3)
-      http_router (~> 0.11)
-      lotus-utils (~> 0.5, >= 0.5.1)
-    lotus-utils (0.5.2)
-    lotus-validations (0.3.3)
-      lotus-utils (~> 0.5)
-    lotus-view (0.4.4)
-      lotus-utils (~> 0.5)
-      tilt (~> 2.0, >= 2.0.1)
-    lotusrb (0.5.0)
-      dotenv (~> 2.0)
-      lotus-controller (~> 0.4, >= 0.4.5)
-      lotus-helpers (~> 0.2, >= 0.2.5)
-      lotus-mailer (~> 0.1)
-      lotus-router (~> 0.4, >= 0.4.3)
-      lotus-utils (~> 0.5, >= 0.5.2)
-      lotus-view (~> 0.4, >= 0.4.4)
-      shotgun (~> 0.9)
-      thor (~> 0.19)
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
+    method_source (0.8.2)
     mime-types (2.99)
     mini_portile2 (2.0.0)
     nokogiri (1.6.7.1)
       mini_portile2 (~> 2.0.0.rc2)
     pg (0.18.4)
+    pry (0.10.3)
+      coderay (~> 1.1.0)
+      method_source (~> 0.8.1)
+      slop (~> 3.4)
+    puma (2.11.2)
+      rack (>= 1.1, < 2.0)
     rack (1.6.4)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -71,12 +130,14 @@ GEM
     sequel (4.29.0)
     shotgun (0.9.1)
       rack (>= 1.0)
+    slop (3.6.0)
     thor (0.19.1)
     tilt (2.0.1)
     url_mount (0.2.1)
       rack
     xpath (2.0.0)
       nokogiri (~> 1.3)
+    yui-compressor (0.12.0)
 
 PLATFORMS
   ruby
@@ -84,9 +145,18 @@ PLATFORMS
 DEPENDENCIES
   bundler
   capybara
-  lotus-model (~> 0.5)
-  lotusrb (= 0.5.0)
+  lotus-assets!
+  lotus-controller!
+  lotus-helpers!
+  lotus-model!
+  lotus-router!
+  lotus-utils!
+  lotus-validations!
+  lotus-view!
+  lotusrb!
   pg
+  pry
+  puma
   rake
   rspec
 

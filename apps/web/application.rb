@@ -209,7 +209,7 @@ module Web
       handle_exceptions false
 
       # Serve static assets during development
-      serve_assets      true
+      # serve_assets      true
     end
 
     ##
@@ -220,7 +220,7 @@ module Web
       handle_exceptions false
 
       # Serve static assets during development
-      serve_assets      true
+      # serve_assets      true
     end
 
     ##
